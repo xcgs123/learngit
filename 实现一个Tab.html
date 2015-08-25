@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tab</title>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+        list-style: none;
+    }
+    .siderbar{
+        box-sizing: border-box;
+        border: 1px solid #999;
+        position: relative;
+        width: 574px;
+        height: 300px;
+        font:14px "Microsoft YaHei";
+        /*overflow: hidden;*/
+    }
+    .siderbar li label{
+        display: block;
+        float: left;
+        text-align: center; 
+        line-height: 30px;
+        width: 190px;  
+        background-color: #f1f1f1; 
+        border-right: 1px solid #cecece;
+        border-bottom: 1px solid #cecece;          
+    }
+    .siderbar li:last-child label{
+        border-right: none;
+    }
+    .siderbar input[type="radio"]{
+        position: absolute;
+        left: -1000em;  /*使其不可见*/
+    }
+    .siderbar .content{
+        padding-top: 50px;
+        position: absolute;
+        left: -1000em;
+        z-index: -1;
+    }
+    .siderbar [id^="tab"]:checked + label{
+        background-color: #fff;
+        border-bottom:none;
+    }
+    .siderbar [id^="tab"]:checked ~ [class^="content"]{
+       left: 20px;
+    }    
+</style>
+<script src="http://127.0.0.1:81/con/assets/js/f5.js"></script>
+</head>
+<body>
+  <div class="siderbar">
+      <ul>
+          <li>
+            <input type="radio" name="tab" id="tab1" checked/>
+            <label for="tab1">课程</label>
+            <div class="content">
+                课程内容
+            </div>
+          </li>
+         <li>
+            <input type="radio" name="tab" id="tab2" />
+            <label for="tab2">学习技能</label>
+            <div class="content">
+                学习技能内容
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="tab" id="tab3" />
+            <label for="tab3">技能图谱</label>
+            <div class="content">
+                技能图谱内容
+            </div>
+          </li>
+      </ul>
+  </div> 
+</body>
+</html>

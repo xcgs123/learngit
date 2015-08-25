@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+       *{
+        margin: 0;
+        padding: 0;
+       }
+       .container{
+           position: absolute;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%,-50%);
+       	   width: 300px;
+           border-radius: 5px;
+           border: 1px solid  #cccccc;
+       }
+       h1{
+           width: 260px;
+           height: 40px;
+           padding:0 20px;
+           font:14px "微软雅黑";
+           line-height: 40px;
+           text-overflow:ellipsis;
+           overflow:hidden;
+           white-space: nowrap;
+           border-radius: 5px 5px 0 0;
+           background-color: #eeeeee;
+       }
+	   	.container1 {
+            padding: 20px;
+            background-color: white;
+            font: 12px "宋体";
+            text-align: center;
+            border-radius: 0 0 5px 5px ;
+	   	}
+	   	.container1 p{
+	   		line-height: 1.5;
+	   	}
+	   	.container1 button{
+	   		margin-top: 20px;
+	   		width: 80px;height: 30px;
+	   		background-color: blue;
+	   		color: white;
+	   		text-align: center;
+	   		border-radius: 5px;
+	   		border: 0;
+	   	}
+        .exit{
+        	position: absolute;
+        	top: 10px;
+        	right: 10px;
+        	cursor: pointer;
+          z-index: 2;
+        }
+	</style>
+</head>
+<body>
+   <div class="container">
+     <h1 >标题栏标题栏标题栏标题栏标题栏标题栏标</h1>
+     <div class="container1">
+        <p>总体：弹窗相对于浏览器窗口固定（即滚动条拖动时不影响弹窗位置）且水平垂直居中，弹窗总宽度302px，高度未知（由内容区的内容决定），圆角半径为5px，边框为1px的实线，边框颜色为#cccccc。
+标题栏：左右留白20px，高度为40px，文字为14px的微软雅黑且垂直居中，只显示单行文字且超出隐藏并显示“...”，背景色为#eeeeee。
+
+内容区：由一个段落和一个按钮组成，四周留白20px，背景为白色，段落与按钮距离20px，字体均为12px的宋体。
+
+段落：行高1.5倍。
+
+按钮：水平居中、宽80px、高30px、蓝底、白字、文字居中、圆角半径为5px。
+
+关闭：宽10px、高10px、距离上边框10px，距离右边框10px，鼠标为手型，假设关闭图标相对css的路径为“../x.png”
+</p>
+        <button>确定</button>
+        <img class="exit" src="../x.png" />
+   </div>
+</html>
